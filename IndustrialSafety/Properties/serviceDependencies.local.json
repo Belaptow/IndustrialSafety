@@ -1,7 +1,17 @@
 {
   "dependencies": {
     "mssql1": {
+      "serviceConnectorResourceId": "",
+      "secretStore": "LocalSecretsFile",
+      "resourceId": null,
       "type": "mssql.local",
+      "connectionId": "Development:ConnectionStrings:DefaultConnection"
+    },
+    "mssql2": {
+      "serviceConnectorResourceId": "",
+      "secretStore": "LocalSecretsFile",
+      "resourceId": null,
+      "type": "mssql.onprem",
       "connectionId": "ConnectionStrings:DefaultConnection"
     }
   }

@@ -2,6 +2,10 @@
   "dependencies": {
     "mssql1": {
       "type": "mssql",
+      "connectionId": "Development:ConnectionStrings:DefaultConnection"
+    },
+    "mssql2": {
+      "type": "mssql",
       "connectionId": "ConnectionStrings:DefaultConnection"
     }
   }

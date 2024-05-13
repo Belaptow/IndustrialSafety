@@ -12,5 +12,6 @@ namespace IndustrialSafety.Data
             : base(options)
         {
         }
+        
     }
 }
