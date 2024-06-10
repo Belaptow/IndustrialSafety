@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="IndustrialSafetyLib.Parties.Company">
+    <Position X="14.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAECABAAAAAAA=</HashCode>
+      <FileName>Parties\Company.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.Parties.Counterparty">
+    <Position X="12.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAEEAAAAAAAAAAAQAAAAAAAAAAAAAAAECAAA=</HashCode>
+      <FileName>Parties\Counterparty.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.Parties.Person">
+    <Position X="10.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAEAAAAAABAAAAAAQAAAAAAAQAIAAAAAAAACAAAg=</HashCode>
+      <FileName>Parties\Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.Domain.Entity" Collapsed="true">
+    <Position X="12.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Entity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.CoreEntities.Group">
+    <Position X="10.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>CoreEntities\Group.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.CoreEntities.Recipient" Collapsed="true">
+    <Position X="10.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CoreEntities\Recipient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.Company.BusinessUnit" Collapsed="true">
+    <Position X="15" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAhgAAAAAAAAAAQAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Company\BusinessUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.Company.DepartmentMember">
+    <Position X="17" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Company\Department.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.Company.Employee" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIABAAAAACAAAAAAAAAAAAAAEAAABAAAAAAAIgAIAAA=</HashCode>
+      <FileName>Company\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.Company.JobTitle">
+    <Position X="18.75" Y="1.75" Width="1.5" />
+    <InheritanceLine Type="IndustrialSafetyLib.Domain.Entity" FixedToPoint="true">
+      <Path>
+        <Point X="13.5" Y="4.5" />
+        <Point X="13.5" Y="4.125" />
+        <Point X="19.625" Y="4.125" />
+        <Point X="19.625" Y="2.983" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Company\JobTitle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.Commons.City">
+    <Position X="8.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commons\City.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.Commons.Country">
+    <Position X="12.25" Y="1.75" Width="1.5" />
+    <InheritanceLine Type="IndustrialSafetyLib.Domain.Entity" ManuallyRouted="true">
+      <Path>
+        <Point X="13.5" Y="4.5" />
+        <Point X="13.5" Y="4.123" />
+        <Point X="13" Y="4.123" />
+        <Point X="13" Y="3.175" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commons\Country.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.Commons.LegalEntity" Collapsed="true">
+    <Position X="12.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAwIAAAAAAAAAAAAAAAAAAABIAAACAA=</HashCode>
+      <FileName>Commons\LegalEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.Commons.Region">
+    <Position X="10.25" Y="1.75" Width="1.5" />
+    <InheritanceLine Type="IndustrialSafetyLib.Domain.Entity" ManuallyRouted="true">
+      <Path>
+        <Point X="13.5" Y="4.5" />
+        <Point X="13.5" Y="4.124" />
+        <Point X="11" Y="4.124" />
+        <Point X="11" Y="3.367" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commons\Region.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.Commons.Sex">
+    <Position X="14.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commons\Sex.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.ProductionSafety.Checkups.Checkup">
+    <Position X="22.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAEAAAAAABAAQAAACAAAAQAAAAAAAAAAACAAAAgAIA=</HashCode>
+      <FileName>ProductionSafety\Checkups\Checkup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.ProductionSafety.Checkups.CheckupDepartment">
+    <Position X="29" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductionSafety\Checkups\Checkup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.ProductionSafety.Checkups.CheckupDepartments" Collapsed="true">
+    <Position X="29" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductionSafety\Checkups\Checkup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.ProductionSafety.Checkups.Violation">
+    <Position X="31.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAgAAIAAQAEAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>ProductionSafety\Checkups\Violation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.ProductionSafety.Checkups.ViolationResponsible">
+    <Position X="23" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAIAAAAAAAE=</HashCode>
+      <FileName>ProductionSafety\Checkups\Violation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.ProductionSafety.Checkups.ViolationResponsibles" Collapsed="true">
+    <Position X="25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductionSafety\Checkups\Violation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.ProductionSafety.Settings.CheckupKind">
+    <Position X="27" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>ProductionSafety\Settings\CheckupKind.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.ProductionSafety.Settings.CheckupType">
+    <Position X="33.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAgAAAAI=</HashCode>
+      <FileName>ProductionSafety\Settings\CheckupType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.ProductionSafety.Settings.CheckupNotififedBusinessUnit">
+    <Position X="27" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>ProductionSafety\Settings\CheckupType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.ProductionSafety.Settings.CheckupNotififedBusinessUnits" Collapsed="true">
+    <Position X="27" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductionSafety\Settings\CheckupType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.ProductionSafety.Settings.CheckupTypeNotificationSetting">
+    <Position X="25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>ProductionSafety\Settings\CheckupType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.ProductionSafety.Settings.CheckupTypeNotificationSettings" Collapsed="true">
+    <Position X="31" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductionSafety\Settings\CheckupType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.ProductionSafety.Settings.ViolationGroup" Collapsed="true">
+    <Position X="15" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductionSafety\Settings\ViolationGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.ProductionSafety.Settings.ViolationKind">
+    <Position X="24.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>ProductionSafety\Settings\ViolationKind.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.ProductionSafety.Settings.ViolationType">
+    <Position X="29.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>ProductionSafety\Settings\ViolationType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.Deals.PlaceInit">
+    <Position X="16.5" Y="1.75" Width="1.5" />
+    <InheritanceLine Type="IndustrialSafetyLib.Domain.Entity" ManuallyRouted="true">
+      <Path>
+        <Point X="13.5" Y="4.5" />
+        <Point X="13.5" Y="4.124" />
+        <Point X="17.25" Y="4.124" />
+        <Point X="17.25" Y="3.367" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAADAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Deals\PlaceInit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.Deals.PlaceInitDepartment">
+    <Position X="21" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Deals\PlaceInit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.Deals.PlaceInitDepartments" Collapsed="true">
+    <Position X="21" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Deals\PlaceInit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.Deals.PlaceInitBusinessUnit">
+    <Position X="19" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Deals\PlaceInit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.Deals.PlaceInitBusinessUnits" Collapsed="true">
+    <Position X="19" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Deals\PlaceInit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.CoreEntities.ChildEntity" Collapsed="true">
+    <Position X="17" Y="4.5" Width="1.5" />
+    <InheritanceLine Type="IndustrialSafetyLib.Domain.Entity" FixedToPoint="true">
+      <Path>
+        <Point X="13.5" Y="4.5" />
+        <Point X="13.5" Y="4.125" />
+        <Point X="16.76" Y="4.125" />
+        <Point X="16.76" Y="4.875" />
+        <Point X="17" Y="4.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CoreEntities\ChildEntity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="IndustrialSafetyLib.CoreEntities.ChildEntityCollectionBase&lt;T&gt;">
+    <Position X="17" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CoreEntities\ChildEntityCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="IndustrialSafetyLib.CoreEntities.GroupMembers" Collapsed="true">
+    <Position X="33" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CoreEntities\Group.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.CoreEntities.GroupMember">
+    <Position X="17" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CoreEntities\Group.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.CoreEntities.User" Collapsed="true">
+    <Position X="31" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAQCAAAAAAAAAAg=</HashCode>
+      <FileName>CoreEntities\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.Company.Department">
+    <Position X="7.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAABAAAABAAAAAAEAgAAAAA=</HashCode>
+      <FileName>Company\Department.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.Company.DepartmentMembers" Collapsed="true">
+    <Position X="23" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Company\Department.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndustrialSafetyLib.Commons.DayOfWeek">
+    <Position X="20.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commons\DayOfWeek.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
