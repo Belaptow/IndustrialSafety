@@ -4,6 +4,7 @@ using IndustrialSafety.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IndustrialSafety.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240610150718_Commons")]
+    partial class Commons
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -288,42 +291,6 @@ namespace IndustrialSafety.Data.Migrations
                     b.ToTable("Countries");
                 });
 
-            modelBuilder.Entity("IndustrialSafetyLib.Commons.LegalEntity", b =>
-                {
-                    b.HasBaseType("IndustrialSafetyLib.Domain.Entity");
-
-                    b.Property<int?>("CityId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LegalAddress")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LegalName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PostalAddress")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TIN")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasIndex("CityId");
-
-                    b.ToTable((string)null);
-                });
-
             modelBuilder.Entity("IndustrialSafetyLib.Commons.Region", b =>
                 {
                     b.HasBaseType("IndustrialSafetyLib.Domain.Entity");
@@ -342,235 +309,6 @@ namespace IndustrialSafety.Data.Migrations
                     b.HasIndex("CountryId");
 
                     b.ToTable("Regions");
-                });
-
-            modelBuilder.Entity("IndustrialSafetyLib.Commons.Sex", b =>
-                {
-                    b.HasBaseType("IndustrialSafetyLib.Domain.Entity");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.ToTable("Sexes");
-                });
-
-            modelBuilder.Entity("IndustrialSafetyLib.Company.JobTitle", b =>
-                {
-                    b.HasBaseType("IndustrialSafetyLib.Domain.Entity");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.ToTable("JobTitles");
-                });
-
-            modelBuilder.Entity("IndustrialSafetyLib.CoreEntities.Recipient", b =>
-                {
-                    b.HasBaseType("IndustrialSafetyLib.Domain.Entity");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.ToTable((string)null);
-                });
-
-            modelBuilder.Entity("IndustrialSafetyLib.Company.BusinessUnit", b =>
-                {
-                    b.HasBaseType("IndustrialSafetyLib.Commons.LegalEntity");
-
-                    b.Property<int?>("CEOId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("HeadCompanyId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TRRC")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasIndex("CEOId");
-
-                    b.HasIndex("HeadCompanyId");
-
-                    b.ToTable("BusinessUnits");
-                });
-
-            modelBuilder.Entity("IndustrialSafetyLib.Parties.Counterparty", b =>
-                {
-                    b.HasBaseType("IndustrialSafetyLib.Commons.LegalEntity");
-
-                    b.Property<string>("NCEA")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NCEO")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("NonResident")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Note")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PSRN")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.ToTable((string)null);
-                });
-
-            modelBuilder.Entity("IndustrialSafetyLib.Company.Employee", b =>
-                {
-                    b.HasBaseType("IndustrialSafetyLib.CoreEntities.Recipient");
-
-                    b.Property<int?>("BusinessUnitId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("DepartmentId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("JobTitleId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("ManagerId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PersonId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasIndex("BusinessUnitId");
-
-                    b.HasIndex("DepartmentId");
-
-                    b.HasIndex("JobTitleId");
-
-                    b.HasIndex("ManagerId");
-
-                    b.HasIndex("PersonId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Employees");
-                });
-
-            modelBuilder.Entity("IndustrialSafetyLib.CoreEntities.Group", b =>
-                {
-                    b.HasBaseType("IndustrialSafetyLib.CoreEntities.Recipient");
-
-                    b.ToTable((string)null);
-                });
-
-            modelBuilder.Entity("IndustrialSafetyLib.Parties.Company", b =>
-                {
-                    b.HasBaseType("IndustrialSafetyLib.Parties.Counterparty");
-
-                    b.Property<double>("AverageRating")
-                        .HasColumnType("float");
-
-                    b.Property<double>("EquipmentRating")
-                        .HasColumnType("float");
-
-                    b.Property<double>("ProcurementRating")
-                        .HasColumnType("float");
-
-                    b.Property<double>("SupplyRating")
-                        .HasColumnType("float");
-
-                    b.ToTable("Companies");
-                });
-
-            modelBuilder.Entity("IndustrialSafetyLib.Parties.Person", b =>
-                {
-                    b.HasBaseType("IndustrialSafetyLib.Parties.Counterparty");
-
-                    b.Property<string>("BirthPlace")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("CitizenshipId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("DateOfBirth")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("MiddleName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("SexId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ShortName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasIndex("CitizenshipId");
-
-                    b.HasIndex("SexId");
-
-                    b.ToTable("People");
-                });
-
-            modelBuilder.Entity("IndustrialSafetyLib.Company.Department", b =>
-                {
-                    b.HasBaseType("IndustrialSafetyLib.CoreEntities.Group");
-
-                    b.Property<int>("BusinessUnitId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("HeadOfficeId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("ManagerId")
-                        .HasColumnType("int");
-
-                    b.HasIndex("BusinessUnitId");
-
-                    b.HasIndex("HeadOfficeId");
-
-                    b.HasIndex("ManagerId");
-
-                    b.ToTable("Departments");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -635,15 +373,6 @@ namespace IndustrialSafety.Data.Migrations
                     b.Navigation("Country");
                 });
 
-            modelBuilder.Entity("IndustrialSafetyLib.Commons.LegalEntity", b =>
-                {
-                    b.HasOne("IndustrialSafetyLib.Commons.City", "City")
-                        .WithMany()
-                        .HasForeignKey("CityId");
-
-                    b.Navigation("City");
-                });
-
             modelBuilder.Entity("IndustrialSafetyLib.Commons.Region", b =>
                 {
                     b.HasOne("IndustrialSafetyLib.Commons.Country", "Country")
@@ -653,104 +382,6 @@ namespace IndustrialSafety.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Country");
-                });
-
-            modelBuilder.Entity("IndustrialSafetyLib.Company.BusinessUnit", b =>
-                {
-                    b.HasOne("IndustrialSafetyLib.Company.Employee", "CEO")
-                        .WithMany()
-                        .HasForeignKey("CEOId");
-
-                    b.HasOne("IndustrialSafetyLib.Company.BusinessUnit", "HeadCompany")
-                        .WithMany()
-                        .HasForeignKey("HeadCompanyId");
-
-                    b.Navigation("CEO");
-
-                    b.Navigation("HeadCompany");
-                });
-
-            modelBuilder.Entity("IndustrialSafetyLib.Company.Employee", b =>
-                {
-                    b.HasOne("IndustrialSafetyLib.Company.BusinessUnit", "BusinessUnit")
-                        .WithMany()
-                        .HasForeignKey("BusinessUnitId");
-
-                    b.HasOne("IndustrialSafetyLib.Company.Department", "Department")
-                        .WithMany()
-                        .HasForeignKey("DepartmentId");
-
-                    b.HasOne("IndustrialSafetyLib.Company.JobTitle", "JobTitle")
-                        .WithMany()
-                        .HasForeignKey("JobTitleId");
-
-                    b.HasOne("IndustrialSafetyLib.Company.Employee", "Manager")
-                        .WithMany()
-                        .HasForeignKey("ManagerId");
-
-                    b.HasOne("IndustrialSafetyLib.Parties.Person", "Person")
-                        .WithMany()
-                        .HasForeignKey("PersonId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("IndustrialSafetyLib.CoreEntities.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId");
-
-                    b.Navigation("BusinessUnit");
-
-                    b.Navigation("Department");
-
-                    b.Navigation("JobTitle");
-
-                    b.Navigation("Manager");
-
-                    b.Navigation("Person");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("IndustrialSafetyLib.Parties.Person", b =>
-                {
-                    b.HasOne("IndustrialSafetyLib.Commons.Country", "Citizenship")
-                        .WithMany()
-                        .HasForeignKey("CitizenshipId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("IndustrialSafetyLib.Commons.Sex", "Sex")
-                        .WithMany()
-                        .HasForeignKey("SexId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Citizenship");
-
-                    b.Navigation("Sex");
-                });
-
-            modelBuilder.Entity("IndustrialSafetyLib.Company.Department", b =>
-                {
-                    b.HasOne("IndustrialSafetyLib.Company.BusinessUnit", "BusinessUnit")
-                        .WithMany()
-                        .HasForeignKey("BusinessUnitId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("IndustrialSafetyLib.Company.Department", "HeadOffice")
-                        .WithMany()
-                        .HasForeignKey("HeadOfficeId");
-
-                    b.HasOne("IndustrialSafetyLib.Company.Employee", "Manager")
-                        .WithMany()
-                        .HasForeignKey("ManagerId");
-
-                    b.Navigation("BusinessUnit");
-
-                    b.Navigation("HeadOffice");
-
-                    b.Navigation("Manager");
                 });
 #pragma warning restore 612, 618
         }

@@ -4,10 +4,15 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Configurations>Debug;Release;Desktop</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ProductionSafety\" />
   </ItemGroup>
 
 </Project>
