@@ -4,6 +4,7 @@ using IndustrialSafety.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IndustrialSafety.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240610172424_ChildEntities")]
+    partial class ChildEntities
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -370,6 +373,11 @@ namespace IndustrialSafety.Data.Migrations
                 {
                     b.HasBaseType("IndustrialSafetyLib.Domain.Entity");
 
+                    b.Property<int>("RootEntityId")
+                        .HasColumnType("int");
+
+                    b.HasIndex("RootEntityId");
+
                     b.ToTable((string)null);
                 });
 
@@ -684,6 +692,17 @@ namespace IndustrialSafety.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Country");
+                });
+
+            modelBuilder.Entity("IndustrialSafetyLib.CoreEntities.ChildEntity", b =>
+                {
+                    b.HasOne("IndustrialSafetyLib.Domain.Entity", "RootEntity")
+                        .WithMany()
+                        .HasForeignKey("RootEntityId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("RootEntity");
                 });
 
             modelBuilder.Entity("IndustrialSafetyLib.Company.BusinessUnit", b =>

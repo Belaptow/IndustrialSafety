@@ -49,10 +49,10 @@
       <FileName>Company\BusinessUnit.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="IndustrialSafetyLib.Company.Department" Collapsed="true">
+  <Class Name="IndustrialSafetyLib.Company.DepartmentMember" Collapsed="true">
     <Position X="7.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAgAAABAAAABAAAAAAAAgAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Company\Department.cs</FileName>
     </TypeIdentifier>
   </Class>

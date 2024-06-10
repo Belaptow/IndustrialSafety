@@ -25,6 +25,7 @@ namespace IndustrialSafety.Data
         #region Company
         public DbSet<BusinessUnit> BusinessUnits { get; set; }
         public DbSet<Department> Departments { get; set; }
+        public DbSet<DepartmentMember> DepartmentMembers { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<JobTitle> JobTitles { get; set; }
         #endregion
@@ -32,6 +33,8 @@ namespace IndustrialSafety.Data
         #region CoreEntities
         public DbSet<Recipient> Recipients { get; set; }
         public DbSet<Group> Groups { get; set; }
+        public DbSet<ChildEntity> ChildEntities { get; set; }
+        public DbSet<GroupMember> GroupMembers { get; set; }
         #endregion
 
         #region Parties
@@ -54,6 +57,7 @@ namespace IndustrialSafety.Data
             builder.Entity<Recipient>().UseTpcMappingStrategy();
             builder.Entity<Group>().UseTpcMappingStrategy();
             builder.Entity<LegalEntity>().UseTpcMappingStrategy();
+            builder.Entity<ChildEntity>().UseTpcMappingStrategy();
 
             builder.Entity<BusinessUnit>()
                 .HasOne(unit => unit.CEO)

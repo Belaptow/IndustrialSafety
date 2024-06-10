@@ -14,5 +14,14 @@ namespace IndustrialSafetyLib.Company
         public Employee? Manager { get; set; }
         public Department? HeadOffice { get; set; }
         public string Code { get; set; }
+        public virtual new DepartmentMembers Members { get; set; } = new DepartmentMembers();
+    }
+    public class DepartmentMembers : ChildEntityCollectionBase<DepartmentMember>
+    {
+
+    }
+    public class DepartmentMember : GroupMember
+    {
+        public virtual new Employee? Member { get => base.Member as Employee; set => base.Member = value; }
     }
 }
