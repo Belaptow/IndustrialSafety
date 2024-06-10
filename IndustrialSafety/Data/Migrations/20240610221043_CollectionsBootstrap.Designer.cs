@@ -4,6 +4,7 @@ using IndustrialSafety.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IndustrialSafety.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240610221043_CollectionsBootstrap")]
+    partial class CollectionsBootstrap
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -112,10 +115,6 @@ namespace IndustrialSafety.Data.Migrations
                         .HasDefaultValueSql("NEXT VALUE FOR [EntitySequence]");
 
                     SqlServerPropertyBuilderExtensions.UseSequence(b.Property<int>("Id"));
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -268,6 +267,10 @@ namespace IndustrialSafety.Data.Migrations
                     b.Property<int>("CountryId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasIndex("CountryId");
 
                     b.ToTable("Cities");
@@ -281,12 +284,20 @@ namespace IndustrialSafety.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.ToTable("Countries");
                 });
 
             modelBuilder.Entity("IndustrialSafetyLib.Commons.DayOfWeek", b =>
                 {
                     b.HasBaseType("IndustrialSafetyLib.Domain.Entity");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Number")
                         .HasColumnType("int");
@@ -341,6 +352,10 @@ namespace IndustrialSafety.Data.Migrations
                     b.Property<int>("CountryId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasIndex("CountryId");
 
                     b.ToTable("Regions");
@@ -350,12 +365,20 @@ namespace IndustrialSafety.Data.Migrations
                 {
                     b.HasBaseType("IndustrialSafetyLib.Domain.Entity");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.ToTable("Sexes");
                 });
 
             modelBuilder.Entity("IndustrialSafetyLib.Company.JobTitle", b =>
                 {
                     b.HasBaseType("IndustrialSafetyLib.Domain.Entity");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.ToTable("JobTitles");
                 });
@@ -371,12 +394,20 @@ namespace IndustrialSafety.Data.Migrations
                 {
                     b.HasBaseType("IndustrialSafetyLib.Domain.Entity");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.ToTable((string)null);
                 });
 
             modelBuilder.Entity("IndustrialSafetyLib.Deals.PlaceInit", b =>
                 {
                     b.HasBaseType("IndustrialSafetyLib.Domain.Entity");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.ToTable("PlaceInits");
                 });
@@ -401,8 +432,12 @@ namespace IndustrialSafety.Data.Migrations
                     b.Property<int>("InitiatorId")
                         .HasColumnType("int");
 
-                    b.Property<int>("KindId")
+                    b.Property<int?>("KindId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("NumberOfViolations")
                         .HasColumnType("int");
@@ -425,7 +460,7 @@ namespace IndustrialSafety.Data.Migrations
                 {
                     b.HasBaseType("IndustrialSafetyLib.Domain.Entity");
 
-                    b.Property<int>("AuthorId")
+                    b.Property<int?>("AuthorId")
                         .HasColumnType("int");
 
                     b.Property<int>("CheckupId")
@@ -434,11 +469,15 @@ namespace IndustrialSafety.Data.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("DepartmentId")
+                    b.Property<int?>("DepartmentId")
                         .HasColumnType("int");
 
                     b.Property<int>("KindId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasIndex("AuthorId");
 
@@ -455,6 +494,10 @@ namespace IndustrialSafety.Data.Migrations
                 {
                     b.HasBaseType("IndustrialSafetyLib.Domain.Entity");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("TypeId")
                         .HasColumnType("int");
 
@@ -470,6 +513,10 @@ namespace IndustrialSafety.Data.Migrations
                     b.Property<int>("BusinessUnitId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasIndex("BusinessUnitId");
 
                     b.ToTable("CheckupTypes");
@@ -479,12 +526,20 @@ namespace IndustrialSafety.Data.Migrations
                 {
                     b.HasBaseType("IndustrialSafetyLib.Domain.Entity");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.ToTable("ViolationGroups");
                 });
 
             modelBuilder.Entity("IndustrialSafetyLib.ProductionSafety.Settings.ViolationKind", b =>
                 {
                     b.HasBaseType("IndustrialSafetyLib.Domain.Entity");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ViolationTypeId")
                         .HasColumnType("int");
@@ -497,6 +552,10 @@ namespace IndustrialSafety.Data.Migrations
             modelBuilder.Entity("IndustrialSafetyLib.ProductionSafety.Settings.ViolationType", b =>
                 {
                     b.HasBaseType("IndustrialSafetyLib.Domain.Entity");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ViolationGroupId")
                         .HasColumnType("int");
@@ -519,6 +578,10 @@ namespace IndustrialSafety.Data.Migrations
 
                     b.Property<int?>("HeadCompanyId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TRRC")
                         .IsRequired()
@@ -543,6 +606,10 @@ namespace IndustrialSafety.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("NonResident")
                         .HasColumnType("bit");
 
@@ -564,7 +631,7 @@ namespace IndustrialSafety.Data.Migrations
                     b.Property<int?>("GroupId")
                         .HasColumnType("int");
 
-                    b.Property<int>("MemberId")
+                    b.Property<int?>("MemberId")
                         .HasColumnType("int");
 
                     b.HasIndex("GroupId");
@@ -679,17 +746,17 @@ namespace IndustrialSafety.Data.Migrations
                 {
                     b.HasBaseType("IndustrialSafetyLib.CoreEntities.Recipient");
 
-                    b.Property<int>("BusinessUnitId")
+                    b.Property<int?>("BusinessUnitId")
                         .HasColumnType("int");
 
-                    b.Property<int>("DepartmentId")
+                    b.Property<int?>("DepartmentId")
                         .HasColumnType("int");
 
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("JobTitleId")
+                    b.Property<int?>("JobTitleId")
                         .HasColumnType("int");
 
                     b.Property<int?>("ManagerId")
@@ -875,7 +942,7 @@ namespace IndustrialSafety.Data.Migrations
                     b.HasOne("IndustrialSafetyLib.Commons.Country", "Country")
                         .WithMany()
                         .HasForeignKey("CountryId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Country");
@@ -895,7 +962,7 @@ namespace IndustrialSafety.Data.Migrations
                     b.HasOne("IndustrialSafetyLib.Commons.Country", "Country")
                         .WithMany()
                         .HasForeignKey("CountryId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Country");
@@ -906,26 +973,24 @@ namespace IndustrialSafety.Data.Migrations
                     b.HasOne("IndustrialSafetyLib.Company.BusinessUnit", "AuditedBusinessUnit")
                         .WithMany()
                         .HasForeignKey("AuditedBusinessUnitId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("IndustrialSafetyLib.Company.Employee", "Auditor")
                         .WithMany()
                         .HasForeignKey("AuditorId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("IndustrialSafetyLib.Deals.PlaceInit", "Initiator")
                         .WithMany()
                         .HasForeignKey("InitiatorId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("IndustrialSafetyLib.ProductionSafety.Settings.CheckupKind", "Kind")
                         .WithMany()
-                        .HasForeignKey("KindId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("KindId");
 
                     b.Navigation("AuditedBusinessUnit");
 
@@ -940,26 +1005,22 @@ namespace IndustrialSafety.Data.Migrations
                 {
                     b.HasOne("IndustrialSafetyLib.Company.Employee", "Author")
                         .WithMany()
-                        .HasForeignKey("AuthorId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("AuthorId");
 
                     b.HasOne("IndustrialSafetyLib.ProductionSafety.Checkups.Checkup", "Checkup")
                         .WithMany()
                         .HasForeignKey("CheckupId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("IndustrialSafetyLib.Company.Department", "Department")
                         .WithMany()
-                        .HasForeignKey("DepartmentId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("DepartmentId");
 
                     b.HasOne("IndustrialSafetyLib.ProductionSafety.Settings.ViolationKind", "Kind")
                         .WithMany()
                         .HasForeignKey("KindId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Author");
@@ -976,7 +1037,7 @@ namespace IndustrialSafety.Data.Migrations
                     b.HasOne("IndustrialSafetyLib.ProductionSafety.Settings.CheckupType", "Type")
                         .WithMany()
                         .HasForeignKey("TypeId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Type");
@@ -987,7 +1048,7 @@ namespace IndustrialSafety.Data.Migrations
                     b.HasOne("IndustrialSafetyLib.ProductionSafety.Settings.CheckupNotififedBusinessUnit", "BusinessUnit")
                         .WithMany()
                         .HasForeignKey("BusinessUnitId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("BusinessUnit");
@@ -998,7 +1059,7 @@ namespace IndustrialSafety.Data.Migrations
                     b.HasOne("IndustrialSafetyLib.ProductionSafety.Settings.ViolationType", "ViolationType")
                         .WithMany()
                         .HasForeignKey("ViolationTypeId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("ViolationType");
@@ -1009,7 +1070,7 @@ namespace IndustrialSafety.Data.Migrations
                     b.HasOne("IndustrialSafetyLib.ProductionSafety.Settings.ViolationGroup", "ViolationGroup")
                         .WithMany()
                         .HasForeignKey("ViolationGroupId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("ViolationGroup");
@@ -1038,9 +1099,7 @@ namespace IndustrialSafety.Data.Migrations
 
                     b.HasOne("IndustrialSafetyLib.CoreEntities.Recipient", "Member")
                         .WithMany()
-                        .HasForeignKey("MemberId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("MemberId");
 
                     b.Navigation("Member");
                 });
@@ -1050,7 +1109,7 @@ namespace IndustrialSafety.Data.Migrations
                     b.HasOne("IndustrialSafetyLib.Company.BusinessUnit", "BusinessUnit")
                         .WithMany()
                         .HasForeignKey("BusinessUnitId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("IndustrialSafetyLib.Deals.PlaceInit", null)
@@ -1069,7 +1128,7 @@ namespace IndustrialSafety.Data.Migrations
                     b.HasOne("IndustrialSafetyLib.Company.Department", "Department")
                         .WithMany()
                         .HasForeignKey("DepartmentId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("IndustrialSafetyLib.Deals.PlaceInit", null)
@@ -1084,7 +1143,7 @@ namespace IndustrialSafety.Data.Migrations
                     b.HasOne("IndustrialSafetyLib.Company.Department", "Department")
                         .WithMany()
                         .HasForeignKey("DepartmentId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Department");
@@ -1104,7 +1163,7 @@ namespace IndustrialSafety.Data.Migrations
                     b.HasOne("IndustrialSafetyLib.Company.BusinessUnit", "BusinessUnit")
                         .WithMany()
                         .HasForeignKey("BusinessUnitId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("BusinessUnit");
@@ -1121,21 +1180,15 @@ namespace IndustrialSafety.Data.Migrations
                 {
                     b.HasOne("IndustrialSafetyLib.Company.BusinessUnit", "BusinessUnit")
                         .WithMany()
-                        .HasForeignKey("BusinessUnitId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("BusinessUnitId");
 
                     b.HasOne("IndustrialSafetyLib.Company.Department", "Department")
                         .WithMany()
-                        .HasForeignKey("DepartmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("DepartmentId");
 
                     b.HasOne("IndustrialSafetyLib.Company.JobTitle", "JobTitle")
                         .WithMany()
-                        .HasForeignKey("JobTitleId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("JobTitleId");
 
                     b.HasOne("IndustrialSafetyLib.Company.Employee", "Manager")
                         .WithMany()
@@ -1144,7 +1197,7 @@ namespace IndustrialSafety.Data.Migrations
                     b.HasOne("IndustrialSafetyLib.Parties.Person", "Person")
                         .WithMany()
                         .HasForeignKey("PersonId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("IndustrialSafetyLib.CoreEntities.User", "User")
@@ -1169,13 +1222,13 @@ namespace IndustrialSafety.Data.Migrations
                     b.HasOne("IndustrialSafetyLib.Commons.Country", "Citizenship")
                         .WithMany()
                         .HasForeignKey("CitizenshipId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("IndustrialSafetyLib.Commons.Sex", "Sex")
                         .WithMany()
                         .HasForeignKey("SexId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Citizenship");
@@ -1188,7 +1241,7 @@ namespace IndustrialSafety.Data.Migrations
                     b.HasOne("IndustrialSafetyLib.Company.BusinessUnit", "BusinessUnit")
                         .WithMany()
                         .HasForeignKey("BusinessUnitId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("IndustrialSafetyLib.Company.Department", "HeadOffice")

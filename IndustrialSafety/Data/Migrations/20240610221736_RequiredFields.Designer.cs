@@ -4,6 +4,7 @@ using IndustrialSafety.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IndustrialSafety.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240610221736_RequiredFields")]
+    partial class RequiredFields
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -112,10 +115,6 @@ namespace IndustrialSafety.Data.Migrations
                         .HasDefaultValueSql("NEXT VALUE FOR [EntitySequence]");
 
                     SqlServerPropertyBuilderExtensions.UseSequence(b.Property<int>("Id"));
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -268,6 +267,10 @@ namespace IndustrialSafety.Data.Migrations
                     b.Property<int>("CountryId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasIndex("CountryId");
 
                     b.ToTable("Cities");
@@ -281,12 +284,20 @@ namespace IndustrialSafety.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.ToTable("Countries");
                 });
 
             modelBuilder.Entity("IndustrialSafetyLib.Commons.DayOfWeek", b =>
                 {
                     b.HasBaseType("IndustrialSafetyLib.Domain.Entity");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Number")
                         .HasColumnType("int");
@@ -341,6 +352,10 @@ namespace IndustrialSafety.Data.Migrations
                     b.Property<int>("CountryId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasIndex("CountryId");
 
                     b.ToTable("Regions");
@@ -350,12 +365,20 @@ namespace IndustrialSafety.Data.Migrations
                 {
                     b.HasBaseType("IndustrialSafetyLib.Domain.Entity");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.ToTable("Sexes");
                 });
 
             modelBuilder.Entity("IndustrialSafetyLib.Company.JobTitle", b =>
                 {
                     b.HasBaseType("IndustrialSafetyLib.Domain.Entity");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.ToTable("JobTitles");
                 });
@@ -371,12 +394,20 @@ namespace IndustrialSafety.Data.Migrations
                 {
                     b.HasBaseType("IndustrialSafetyLib.Domain.Entity");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.ToTable((string)null);
                 });
 
             modelBuilder.Entity("IndustrialSafetyLib.Deals.PlaceInit", b =>
                 {
                     b.HasBaseType("IndustrialSafetyLib.Domain.Entity");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.ToTable("PlaceInits");
                 });
@@ -403,6 +434,10 @@ namespace IndustrialSafety.Data.Migrations
 
                     b.Property<int>("KindId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("NumberOfViolations")
                         .HasColumnType("int");
@@ -440,6 +475,10 @@ namespace IndustrialSafety.Data.Migrations
                     b.Property<int>("KindId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasIndex("AuthorId");
 
                     b.HasIndex("CheckupId");
@@ -454,6 +493,10 @@ namespace IndustrialSafety.Data.Migrations
             modelBuilder.Entity("IndustrialSafetyLib.ProductionSafety.Settings.CheckupKind", b =>
                 {
                     b.HasBaseType("IndustrialSafetyLib.Domain.Entity");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("TypeId")
                         .HasColumnType("int");
@@ -470,6 +513,10 @@ namespace IndustrialSafety.Data.Migrations
                     b.Property<int>("BusinessUnitId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasIndex("BusinessUnitId");
 
                     b.ToTable("CheckupTypes");
@@ -479,12 +526,20 @@ namespace IndustrialSafety.Data.Migrations
                 {
                     b.HasBaseType("IndustrialSafetyLib.Domain.Entity");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.ToTable("ViolationGroups");
                 });
 
             modelBuilder.Entity("IndustrialSafetyLib.ProductionSafety.Settings.ViolationKind", b =>
                 {
                     b.HasBaseType("IndustrialSafetyLib.Domain.Entity");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ViolationTypeId")
                         .HasColumnType("int");
@@ -497,6 +552,10 @@ namespace IndustrialSafety.Data.Migrations
             modelBuilder.Entity("IndustrialSafetyLib.ProductionSafety.Settings.ViolationType", b =>
                 {
                     b.HasBaseType("IndustrialSafetyLib.Domain.Entity");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ViolationGroupId")
                         .HasColumnType("int");
@@ -520,6 +579,10 @@ namespace IndustrialSafety.Data.Migrations
                     b.Property<int?>("HeadCompanyId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("TRRC")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -540,6 +603,10 @@ namespace IndustrialSafety.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NCEO")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

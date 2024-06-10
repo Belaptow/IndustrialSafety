@@ -26,6 +26,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\SharedLib\SharedLib\SharedLib.csproj" />
     <ProjectReference Include="..\IndustrialSafetyLib\IndustrialSafetyLib.csproj" />
   </ItemGroup>
 

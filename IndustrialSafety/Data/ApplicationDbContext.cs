@@ -8,6 +8,8 @@ using IndustrialSafetyLib.ProductionSafety.Checkups;
 using IndustrialSafetyLib.ProductionSafety.Settings;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
+using SharedLib;
 
 
 namespace IndustrialSafety.Data
@@ -82,6 +84,11 @@ namespace IndustrialSafety.Data
             builder.Entity<Group>().UseTpcMappingStrategy();
             builder.Entity<LegalEntity>().UseTpcMappingStrategy();
             builder.Entity<ChildEntity>().UseTpcMappingStrategy();
+
+            builder.Model.GetEntityTypes()
+                         .SelectMany(t => t.GetForeignKeys())
+                         .Where(fk => !fk.IsOwnership && fk.DeleteBehavior == DeleteBehavior.Cascade)
+                         .ForEach(fk => fk.DeleteBehavior = DeleteBehavior.Restrict);
 
             builder.Entity<BusinessUnit>()
                 .HasOne(unit => unit.CEO)
