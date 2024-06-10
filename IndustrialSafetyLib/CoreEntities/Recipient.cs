@@ -10,6 +10,6 @@ namespace IndustrialSafetyLib.CoreEntities
 {
     public abstract class Recipient : Entity
     {
-        public string Name { get; set; }
+        
     }
 }

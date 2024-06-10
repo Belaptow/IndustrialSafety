@@ -13,10 +13,10 @@ namespace IndustrialSafetyLib.Company
     {
         public Person Person { get; set; }
         public User? User { get; set; }
-        public BusinessUnit? BusinessUnit { get; set; }
-        public Department? Department { get; set; }
+        public BusinessUnit BusinessUnit { get; set; }
+        public Department Department { get; set; }
         public Employee? Manager { get; set; }
-        public JobTitle? JobTitle { get; set; }
+        public JobTitle JobTitle { get; set; }
         public string Email { get; set; } = "";
         public string Phone { get; set; } = "";
     }

@@ -10,7 +10,7 @@ namespace IndustrialSafetyLib.Parties
 {
     public abstract class Counterparty : LegalEntity
     {
-        public string Name { get; set; }
+        
         public string PSRN { get; set; }
         public string NCEO { get; set; }
         public string NCEA { get; set; }

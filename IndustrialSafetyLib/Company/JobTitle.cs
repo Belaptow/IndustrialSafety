@@ -9,6 +9,6 @@ namespace IndustrialSafetyLib.Company
 {
     public class JobTitle : Entity
     {
-        public string Name { get; set; }
+        
     }
 }

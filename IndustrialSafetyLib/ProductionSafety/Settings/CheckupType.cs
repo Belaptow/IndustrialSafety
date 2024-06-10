@@ -11,7 +11,7 @@ namespace IndustrialSafetyLib.ProductionSafety.Settings
 {
     public class CheckupType : Entity
     {
-        public string Name { get; set; }
+        
         public CheckupTypeNotificationSettings NotificationSettings { get; set; }
         public CheckupNotififedBusinessUnit BusinessUnit { get; set; }
     }

@@ -9,7 +9,7 @@ namespace IndustrialSafetyLib.ProductionSafety.Settings
 {
     public class ViolationType : Entity
     {
-        public string Name { get; set; }
+        
         public ViolationGroup ViolationGroup { get; set; }
     }
 }

@@ -18,6 +18,6 @@ namespace IndustrialSafetyLib.CoreEntities
     }
     public abstract class GroupMember : ChildEntity
     {
-        public virtual Recipient? Member { get; set; }
+        public virtual Recipient Member { get; set; }
     }
 }

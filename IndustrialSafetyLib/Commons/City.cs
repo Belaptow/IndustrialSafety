@@ -9,7 +9,7 @@ namespace IndustrialSafetyLib.Commons
 {
     public class City : Entity
     {
-        public string Name { get; set; }
+        
         public Country Country { get; set; }
     }
 }

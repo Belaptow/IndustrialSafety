@@ -9,6 +9,6 @@ namespace IndustrialSafetyLib.Commons
 {
     public class Sex : Entity
     {
-        public string Name { get; set; }
+        
     }
 }

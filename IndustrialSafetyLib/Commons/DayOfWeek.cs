@@ -10,6 +10,6 @@ namespace IndustrialSafetyLib.Commons
     public class DayOfWeek : Entity
     {
         public int Number {  get; set; }
-        public string Name { get; set; }
+        
     }
 }

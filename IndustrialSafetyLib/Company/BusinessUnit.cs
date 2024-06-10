@@ -10,7 +10,7 @@ namespace IndustrialSafetyLib.Company
 {
     public class BusinessUnit : LegalEntity
     {
-        public string Name { get; set; }
+        
         public string Description { get; set; } = "";
         public string TRRC { get; set; } = "";
         public BusinessUnit? HeadCompany {  get; set; } 

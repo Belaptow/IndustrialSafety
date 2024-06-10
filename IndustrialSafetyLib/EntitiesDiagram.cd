@@ -10,7 +10,7 @@
   <Class Name="IndustrialSafetyLib.Parties.Counterparty">
     <Position X="12.75" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAIAAAEEAAAAAAAAAAAQAAAAAAAAAAAAAAAECAAA=</HashCode>
+      <HashCode>AAAAAIAAAEEAAAAAAAAAAAAAAAAAAAAAAAAAAAECAAA=</HashCode>
       <FileName>Parties\Counterparty.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -24,7 +24,7 @@
   <Class Name="IndustrialSafetyLib.Domain.Entity" Collapsed="true">
     <Position X="12.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Domain\Entity.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -38,14 +38,14 @@
   <Class Name="IndustrialSafetyLib.CoreEntities.Recipient" Collapsed="true">
     <Position X="10.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CoreEntities\Recipient.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="IndustrialSafetyLib.Company.BusinessUnit" Collapsed="true">
     <Position X="15" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAhgAAAAAAAAAAQAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <HashCode>AAAAAAAAAAhgAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
       <FileName>Company\BusinessUnit.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -70,18 +70,18 @@
         <Point X="13.5" Y="4.5" />
         <Point X="13.5" Y="4.125" />
         <Point X="19.625" Y="4.125" />
-        <Point X="19.625" Y="2.983" />
+        <Point X="19.625" Y="2.747" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Company\JobTitle.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="IndustrialSafetyLib.Commons.City">
     <Position X="8.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Commons\City.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -92,11 +92,11 @@
         <Point X="13.5" Y="4.5" />
         <Point X="13.5" Y="4.123" />
         <Point X="13" Y="4.123" />
-        <Point X="13" Y="3.175" />
+        <Point X="13" Y="2.983" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Commons\Country.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -114,25 +114,25 @@
         <Point X="13.5" Y="4.5" />
         <Point X="13.5" Y="4.124" />
         <Point X="11" Y="4.124" />
-        <Point X="11" Y="3.367" />
+        <Point X="11" Y="3.175" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Commons\Region.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="IndustrialSafetyLib.Commons.Sex">
     <Position X="14.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Commons\Sex.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="IndustrialSafetyLib.ProductionSafety.Checkups.Checkup">
     <Position X="22.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAEAAAAAABAAQAAACAAAAQAAAAAAAAAAACAAAAgAIA=</HashCode>
+      <HashCode>AQAEAAAAAABAAQAAACAAAAAAAAAAAAAAAACAAAAgAIA=</HashCode>
       <FileName>ProductionSafety\Checkups\Checkup.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -153,7 +153,7 @@
   <Class Name="IndustrialSafetyLib.ProductionSafety.Checkups.Violation">
     <Position X="31.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAABAAAAAgAAIAAQAEAAAAAABAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAABAAAAAgAAIAAAAEAAAAAABAAAAAAAAAAA=</HashCode>
       <FileName>ProductionSafety\Checkups\Violation.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -174,14 +174,14 @@
   <Class Name="IndustrialSafetyLib.ProductionSafety.Settings.CheckupKind">
     <Position X="27" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>ProductionSafety\Settings\CheckupKind.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="IndustrialSafetyLib.ProductionSafety.Settings.CheckupType">
     <Position X="33.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAgAAAAI=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAI=</HashCode>
       <FileName>ProductionSafety\Settings\CheckupType.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -216,21 +216,21 @@
   <Class Name="IndustrialSafetyLib.ProductionSafety.Settings.ViolationGroup" Collapsed="true">
     <Position X="15" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ProductionSafety\Settings\ViolationGroup.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="IndustrialSafetyLib.ProductionSafety.Settings.ViolationKind">
     <Position X="24.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
       <FileName>ProductionSafety\Settings\ViolationKind.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="IndustrialSafetyLib.ProductionSafety.Settings.ViolationType">
     <Position X="29.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
       <FileName>ProductionSafety\Settings\ViolationType.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -241,11 +241,11 @@
         <Point X="13.5" Y="4.5" />
         <Point X="13.5" Y="4.124" />
         <Point X="17.25" Y="4.124" />
-        <Point X="17.25" Y="3.367" />
+        <Point X="17.25" Y="3.175" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAADAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Deals\PlaceInit.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -340,7 +340,7 @@
   <Class Name="IndustrialSafetyLib.Commons.DayOfWeek">
     <Position X="20.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAEAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Commons\DayOfWeek.cs</FileName>
     </TypeIdentifier>
   </Class>

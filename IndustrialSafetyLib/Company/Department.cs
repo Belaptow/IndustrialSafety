@@ -22,6 +22,6 @@ namespace IndustrialSafetyLib.Company
     }
     public class DepartmentMember : GroupMember
     {
-        public virtual new Employee? Member { get => base.Member as Employee; set => base.Member = value; }
+        public virtual new Employee Member { get => base.Member as Employee; set => base.Member = value; }
     }
 }

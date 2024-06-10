@@ -11,7 +11,7 @@ namespace IndustrialSafetyLib.Deals
 {
     public class PlaceInit : Entity
     {
-        public string Name { get; set; }
+        
         public PlaceInitDepartments Departments { get; set; }
         public PlaceInitBusinessUnits BusinessUnits { get; set; }
     }

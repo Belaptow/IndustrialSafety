@@ -13,9 +13,9 @@ namespace IndustrialSafetyLib.ProductionSafety.Checkups
 {
     public class Violation : Entity
     {
-        public string Name { get; set; }
-        public Employee? Author { get; set; }
-        public Department? Department { get; set; }
+        
+        public Employee Author { get; set; }
+        public Department Department { get; set; }
         public DateTime Date {  get; set; }
         public ViolationKind Kind { get; set; }
         public Checkup Checkup { get; set; }

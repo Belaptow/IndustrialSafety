@@ -9,7 +9,7 @@ namespace IndustrialSafetyLib.ProductionSafety.Settings
 {
     public class CheckupKind : Entity
     {
-        public string Name { get; set; }
+        
         public CheckupType Type { get; set; }
     }
 }

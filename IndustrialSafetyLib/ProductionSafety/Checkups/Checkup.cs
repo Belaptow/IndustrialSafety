@@ -13,9 +13,9 @@ namespace IndustrialSafetyLib.ProductionSafety.Checkups
 {
     public class Checkup : Entity
     {
-        public string Name { get; set; }
+        
         public string Goal { get; set; }
-        public CheckupKind? Kind { get; set; }
+        public CheckupKind Kind { get; set; }
         public int NumberOfViolations { get; set; }
         public DateTime? PlannedDate { get; set; }
         public DateTime? ActualDate { get; set; }
