@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "IndustrialSafetyDesktop": {
+      "commandName": "Project",
+      "commandLineArgs": "BuildWrapper"
+    },
+    "FullStart": {
+      "commandName": "Project"
+    }
+  }
+}
