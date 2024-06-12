@@ -10,6 +10,9 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Emit;
 using SharedLib;
+using Microsoft.Build.Execution;
+using IndustrialSafetyDataSeed.DTO.Commons;
+using IndustrialSafetyDataSeed;
 
 
 namespace IndustrialSafety.Data
@@ -17,8 +20,8 @@ namespace IndustrialSafety.Data
     public class ApplicationDbContext : IdentityDbContext<User>
     {
         #region Domain
-        public DbSet<Entity> Entities { get; set; }
         #endregion
+
         #region Commons
         public DbSet<Country> Countries { get; set; }
         public DbSet<City> Cities { get; set; }
@@ -79,7 +82,6 @@ namespace IndustrialSafety.Data
         }
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<Entity>().UseTpcMappingStrategy();
             builder.Entity<Recipient>().UseTpcMappingStrategy();
             builder.Entity<Group>().UseTpcMappingStrategy();
             builder.Entity<LegalEntity>().UseTpcMappingStrategy();
@@ -89,6 +91,15 @@ namespace IndustrialSafety.Data
                          .SelectMany(t => t.GetForeignKeys())
                          .Where(fk => !fk.IsOwnership && fk.DeleteBehavior == DeleteBehavior.Cascade)
                          .ForEach(fk => fk.DeleteBehavior = DeleteBehavior.Restrict);
+
+            var countries = DataSeedService.GetAll<CountryDTO>().Select((dto, index) => new Country() { FullName = dto.FullName, Id = index + 1, Name = dto.Name });
+            var regions = DataSeedService.GetAll<RegionDTO>().Select((dto, index) => new { Id = index + 1, Name = dto.Name, Code = dto.Code, CountryId = countries.Single(country => Equals(country.Name, dto.Country)).Id });
+
+            builder.Entity<Country>()
+                .HasData(countries);
+
+            builder.Entity<Region>()
+                .HasData(regions);
 
             builder.Entity<BusinessUnit>()
                 .HasOne(unit => unit.CEO)

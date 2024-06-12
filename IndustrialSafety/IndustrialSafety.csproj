@@ -27,7 +27,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\SharedLib\SharedLib\SharedLib.csproj" />
+    <ProjectReference Include="..\IndustrialSafetyDataSeed\IndustrialSafetyDataSeed.csproj" />
     <ProjectReference Include="..\IndustrialSafetyLib\IndustrialSafetyLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\Admin\Commons\Countries\" />
+    <Folder Include="Pages\Admin\Company\Employees\" />
   </ItemGroup>
 
 </Project>

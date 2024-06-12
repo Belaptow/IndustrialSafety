@@ -1,4 +1,5 @@
 ﻿using IndustrialSafetyLib.Domain;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace IndustrialSafetyLib.Commons
 {
     public class Country : Entity
     {
-        
-        public string Code { get; set; }
+        public string FullName { get; set; }
+        public string? Code { get; set; }
     }
 }

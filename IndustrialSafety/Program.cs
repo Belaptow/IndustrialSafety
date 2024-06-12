@@ -1,4 +1,7 @@
 using IndustrialSafety.Data;
+using IndustrialSafetyDataSeed;
+using IndustrialSafetyDataSeed.DTO.Commons;
+using IndustrialSafetyLib.Commons;
 using IndustrialSafetyLib.CoreEntities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -26,8 +29,6 @@ builder.Services.AddDefaultIdentity<User>(
     )
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddRazorPages(options => options.Conventions.AuthorizeFolder("/"));
-
-
 
 var app = builder.Build();
 
