@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedLib", "..\SharedLib\S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IndustrialSafetyDesktop", "IndustrialSafetyDesktop\IndustrialSafetyDesktop.csproj", "{46CA6411-D57B-44F1-8A23-BF1BE1B2BF97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndustrialSafetyDataSeed", "IndustrialSafetyDataSeed\IndustrialSafetyDataSeed.csproj", "{41E4BC42-BB05-4482-AAC5-3AC30AA070EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IndustrialSafetyDataSeed", "IndustrialSafetyDataSeed\IndustrialSafetyDataSeed.csproj", "{41E4BC42-BB05-4482-AAC5-3AC30AA070EC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IndustrialSafetyView", "IndustrialSafetyView\IndustrialSafetyView.csproj", "{BFCD408A-1EF5-4165-806C-1BB10485925B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +52,12 @@ Global
 		{41E4BC42-BB05-4482-AAC5-3AC30AA070EC}.Desktop|Any CPU.Build.0 = Debug|Any CPU
 		{41E4BC42-BB05-4482-AAC5-3AC30AA070EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41E4BC42-BB05-4482-AAC5-3AC30AA070EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFCD408A-1EF5-4165-806C-1BB10485925B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFCD408A-1EF5-4165-806C-1BB10485925B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFCD408A-1EF5-4165-806C-1BB10485925B}.Desktop|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFCD408A-1EF5-4165-806C-1BB10485925B}.Desktop|Any CPU.Build.0 = Debug|Any CPU
+		{BFCD408A-1EF5-4165-806C-1BB10485925B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFCD408A-1EF5-4165-806C-1BB10485925B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

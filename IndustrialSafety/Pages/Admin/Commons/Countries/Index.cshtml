@@ -1,0 +1,40 @@
+﻿@page
+@using IndustrialSafety.Pages.Shared
+@model IndustrialSafety.Pages.Admin.Commons.Regions.IndexModel
+
+@{
+    ViewData["Title"] = "Страны";
+}
+
+<h1>Страны</h1>
+
+<p>
+    <a asp-page="Create">Создать</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            @foreach (var property in Model.Properties)
+            {
+                <th>@Model.GetDisplayName(property)</th>
+            }
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Entities)
+        {
+            <tr>
+                @foreach (var property in Model.Properties)
+                {
+                    <td>@Model.GetPropertyDisplayValue(item, property)</td>
+                }
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id">Редактировать</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id">Подробнее</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Удалить</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

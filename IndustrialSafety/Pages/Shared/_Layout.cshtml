@@ -1,4 +1,12 @@
-﻿<!DOCTYPE html>
+﻿@using IndustrialSafety.Domain.ViewModel
+@{
+    var pages = new List<NavigationDropDownModel>()
+    {
+        new NavigationDropDownModel("Прочее", "Commons", new List<NavigationPageModel>() { new NavigationPageModel("Страны", "Countries"), new NavigationPageModel("Регионы", "Regions") }),
+        new NavigationDropDownModel("Компания", "Company", new List<NavigationPageModel>() { new NavigationPageModel("Сотрудники", "Employees") })
+    };
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -25,20 +33,37 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Конфиденциальность</a>
                         </li>
-                    </ul>
-                    <ul class="navbar-nav">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Админ
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" asp-area="" asp-page="/Admin/Company/Employees/Index">Employees</a></li>
-                                <li><a class="dropdown-item" asp-area="" asp-page="/Index">Домой</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" asp-area="" asp-page="/Index">Домой</a></li>
+                            <button class="btn dropdown-toggle"
+                                    type="button"
+                                    id="MyAccountDDM"
+                                    data-bs-toggle="dropdown"
+                                    data-bs-auto-close="outside"
+                                    aria-expanded="false">
+                                Навигация
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="MyAccountDDM" id="AppDropDownId">
+                                @foreach (var navPage in pages)
+                                {
+                                    <li>
+                                        <div class="btn-group dropend">
+                                            <a type="button" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                                               aria-expanded="false">
+                                                @navPage.Title
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                @foreach (var navTarget in navPage.Items)
+                                                {
+                                                    <li><a class="dropdown-item" asp-area="" asp-page="/Admin/@navPage.Path/@navTarget.Path/Index">@navTarget.Title</a></li>
+                                                }
+                                            </ul>
+                                        </div>
+                                    </li>
+                                }
                             </ul>
                         </li>
                     </ul>
+                    
                     <partial name="_LoginPartial" />
                 </div>
 
