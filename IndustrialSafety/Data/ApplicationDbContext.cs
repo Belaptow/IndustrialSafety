@@ -60,19 +60,19 @@ namespace IndustrialSafety.Data
 
         #region ProductionSafety
         #region Checkups
-        DbSet<Checkup> Checkups { get; set; }
-        DbSet<CheckupDepartment> CheckupsDepartments { get; set; }
-        DbSet<Violation> Violations { get; set; }
-        DbSet<ViolationResponsible> ViolationResponsibles { get; set; }
+        public DbSet<Checkup> Checkups { get; set; }
+        public DbSet<CheckupDepartment> CheckupsDepartments { get; set; }
+        public DbSet<Violation> Violations { get; set; }
+        public DbSet<ViolationResponsible> ViolationResponsibles { get; set; }
         #endregion
         #region Settings
-        DbSet<CheckupKind> CheckupKinds { get; set; }
-        DbSet<CheckupType> CheckupTypes { get; set; }
-        DbSet<CheckupNotififedBusinessUnit> CheckupNotififedBusinessUnits { get; set; }
-        DbSet<CheckupTypeNotificationSetting> CheckupTypeNotificationSettings { get; set; }
-        DbSet<ViolationGroup> ViolationGroups { get; set; }
-        DbSet<ViolationKind> ViolationKinds { get; set; }
-        DbSet<ViolationType> ViolationTypes { get; set; }
+        public DbSet<CheckupKind> CheckupKinds { get; set; }
+        public DbSet<CheckupType> CheckupTypes { get; set; }
+        public DbSet<CheckupNotififedBusinessUnit> CheckupNotififedBusinessUnits { get; set; }
+        public DbSet<CheckupTypeNotificationSetting> CheckupTypeNotificationSettings { get; set; }
+        public DbSet<ViolationGroup> ViolationGroups { get; set; }
+        public DbSet<ViolationKind> ViolationKinds { get; set; }
+        public DbSet<ViolationType> ViolationTypes { get; set; }
         #endregion
         #endregion
 
